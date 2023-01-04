@@ -4,11 +4,13 @@ export const ContactsList = styled.ul`
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: ${props => props.theme.colors.white};
 
     width: 600px;
 
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: ${props => props.theme.shadow.contactsList};
     border-radius: 4px;
 `
 
@@ -23,13 +25,13 @@ export const ContactItem = styled.li`
     padding-right: 16px;
 
     :nth-child(2n + 1) {
-        background-color: #f7f7f7;
+        background-color: ${props => props.theme.colors.itemBackgroundColorGrey};;
     }
     
 `
 export const ContactText = styled.p`
     font-weight: 700;
-
+    min-width: 240px;
 `
 
 export const ContactButton = styled.button`
@@ -39,17 +41,16 @@ export const ContactButton = styled.button`
     height: 30px;
     min-width: 80px;
     border: 3px solid;
-    border-color: orange;
-    background-color: orange;
-    color: white;
+    border-color: ${props => props.theme.colors.accentColor};;
+    background-color: ${props => props.theme.colors.accentColor};
+    color: ${props => props.theme.colors.white};
     border-radius: 4px;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer; ;
 
     :hover, :focus {
-        background-color: white;
-        color: #222222;
-        
+        background-color: ${props => props.theme.colors.white};
+        color: ${props => props.theme.colors.text};
     }
 `

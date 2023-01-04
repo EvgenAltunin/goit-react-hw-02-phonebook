@@ -1,3 +1,6 @@
+import { BsFillPersonFill, BsTelephoneFill } from 'react-icons/bs';
+
+
 import PropTypes from 'prop-types'
 import {ContactsList, ContactItem, ContactText, ContactButton} from 'components/ContactList/ContactList.styled'
 
@@ -5,8 +8,9 @@ export const ContactList = ({ contacts, onDeleteContact }) => (
     <ContactsList>
         {contacts.map(({id, name, number}) => (
             <ContactItem key={id}>
-                <ContactText>{name}</ContactText>
-                <ContactText>{number}</ContactText>
+                <ContactText><BsFillPersonFill style={{fill: 'orange', marginRight: '5px'}} />{name}</ContactText>
+                
+                <ContactText><BsTelephoneFill style={{fill: 'orange', marginRight: '5px'}}/>{number}</ContactText>
                 <ContactButton type='button' onClick={() => onDeleteContact(id)}>Delete</ContactButton>
             </ContactItem>
         ))}
