@@ -30,6 +30,8 @@ export const ContactItem = styled.li`
     
 `
 export const ContactText = styled.p`
+    display: flex;
+    align-items: center;
     font-weight: 700;
     min-width: 240px;
 `
